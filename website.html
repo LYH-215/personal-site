@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>我的网站 · 个人作品</title>
+  <meta name="description" content="个人网站作品介绍：功能、技术栈、开发过程与在线访问">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="website">
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <!-- ============ 顶部导航 ============ -->
+  <header class="header">
+    <div class="container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" data-key="profile.initials"></span>
+        <span>
+          <span data-key="profile.name"></span>
+          <small data-key="profile.title"></small>
+        </span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a data-nav="home" href="index.html#profile">基本信息</a>
+        <a href="index.html#intro">个人简介</a>
+        <a href="index.html#skills">能力结构</a>
+        <a href="index.html#record">成长经历</a>
+        <a data-nav="website" href="website.html">我的网站</a>
+        <a href="index.html#contact">联系</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" title="切换深色 / 浅色"></button>
+        <button class="icon-btn" id="editToggle" type="button" title="开启 / 关闭编辑模式">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h4L20 8l-4-4L4 16z"/><path d="M14 6l4 4"/></svg>
+        </button>
+        <button class="icon-btn" id="navToggle" type="button" title="菜单">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 作品横幅 ============ -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="banner-badge">🚀 <span data-key="myWebsite.badge"></span></span>
+      <h1 data-key="myWebsite.name"></h1>
+      <p class="banner-sub" data-key="myWebsite.slogan"></p>
+
+      <div class="url-bar">
+        <i class="status-dot"></i>
+        <code data-key="myWebsite.url"></code>
+        <a class="btn btn-light" data-key-href="myWebsite.url" href="#" target="_blank" rel="noopener">
+          打开网站
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 作品概览 ============ -->
+  <section class="section">
+    <div class="container split">
+      <div class="reveal">
+        <span class="eyebrow">💡 作品概览</span>
+        <h2 class="section-title">这个网站是做什么的</h2>
+        <div class="prose" data-key="myWebsite.summary"></div>
+        <a class="btn btn-primary" data-key-href="myWebsite.url" href="#" target="_blank" rel="noopener" style="margin-top:24px">
+          立即在线体验
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <div class="card reveal" style="padding:30px">
+        <h3 style="margin-bottom:18px">技术栈</h3>
+        <div class="chip-wrap" data-list="myWebsite.techStack" data-item="chip"></div>
+        <ul class="dot-list" style="margin-top:26px">
+          <li>部署平台：PythonAnywhere（云端托管，7×24 可访问）</li>
+          <li>访问方式：任意浏览器打开网址即可，无需安装</li>
+          <li>维护方式：通过 Git 版本管理，持续迭代更新</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 实时预览 ============ -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">🖥️ 实时预览</span>
+        <h2 class="section-title">不必跳转，先看一眼</h2>
+        <p class="section-desc">下方是网站的实时嵌入预览，可以直接滚动浏览；若目标网站禁止被嵌入，请点击上方按钮前往访问。</p>
+      </div>
+
+      <div class="preview-box reveal" id="previewBox">
+        <div class="browser-bar">
+          <div class="browser-dots"><i></i><i></i><i></i></div>
+          <div class="browser-url" data-key="myWebsite.urlText"></div>
+        </div>
+        <div class="frame-wrap">
+          <iframe id="siteFrame" title="我的网站预览" loading="lazy"
+                  sandbox="allow-scripts allow-same-origin allow-popups allow-forms" referrerpolicy="no-referrer"></iframe>
+          <div class="frame-mask">
+            <div class="spinner"></div>
+            <p>正在加载网站预览…</p>
+          </div>
+        </div>
+        <div class="preview-fallback">
+          <h4>该网站暂时无法在此页面内嵌入显示</h4>
+          <p class="muted">别担心，点击下方按钮可以直接在新窗口中打开我的网站。</p>
+          <a class="btn btn-primary" data-key-href="myWebsite.url" href="#" target="_blank" rel="noopener" style="margin-top:16px">在新窗口打开</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 功能亮点 ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">✨ 功能亮点</span>
+        <h2 class="section-title">它都能做什么</h2>
+      </div>
+      <div class="feature-grid reveal" data-list="myWebsite.features" data-item="feature"></div>
+    </div>
+  </section>
+
+  <!-- ============ 开发历程 ============ -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">🛠️ 开发历程</span>
+        <h2 class="section-title">它是怎么被做出来的</h2>
+        <p class="section-desc">从一张草图到公网可以访问，每一步都是自己踩过来的。</p>
+      </div>
+      <div class="timeline reveal" data-list="myWebsite.milestones" data-item="milestone"></div>
+    </div>
+  </section>
+
+  <!-- ============ 挑战与收获 ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">🎯 挑战与收获</span>
+        <h2 class="section-title">做完这个项目学到了什么</h2>
+      </div>
+      <div style="display:grid;gap:18px" class="reveal" data-list="myWebsite.challenges" data-item="qa"></div>
+    </div>
+  </section>
+
+  <!-- ============ 相关链接 ============ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">🔗 相关链接</span>
+        <h2 class="section-title">从这里出发</h2>
+      </div>
+      <div class="link-grid reveal" data-list="myWebsite.links" data-item="link"></div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="cta-panel reveal">
+        <h2>欢迎来我的网站上逛逛</h2>
+        <p>如果你对它的技术实现感兴趣，或者有任何建议，都非常欢迎告诉我。</p>
+        <div class="hero-actions">
+          <a class="btn btn-light" data-key-href="myWebsite.url" href="#" target="_blank" rel="noopener">访问我的网站</a>
+          <a class="btn btn-light" href="index.html#contact">给我留言</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 页脚 ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <p data-key="footer.text"></p>
+        <div class="footer-socials">
+          <a class="tag" data-key-href="myWebsite.url" data-hide-empty href="#" target="_blank" rel="noopener">我的网站</a>
+          <a class="tag" data-key-href="contact.github" data-hide-empty href="#" target="_blank" rel="noopener">GitHub</a>
+          <a class="tag" href="index.html#profile">返回基本信息</a>
+        </div>
+      </div>
+      <div class="footer-copy">
+        © <span id="year"></span> <span data-key="profile.name"></span> · <span data-key="footer.copyright"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
