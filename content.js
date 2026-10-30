@@ -157,6 +157,10 @@ const SITE = {
     url: "https://lyh18328594590.pythonanywhere.com/",   // ← 你的网址
     urlText: "lyh18328594590.pythonanywhere.com",
     showPreview: true,        // 是否在页面中嵌入实时预览（false 则只显示卡片）
+    /* 主网址之外的其他作品（显示在横幅主网址下方，可增删） */
+    moreUrls: [
+      { name: "客户测评报告", desc: "一份客户测评分析报告，呈现测评思路、数据呈现与核心结论。", url: "https://lyh-215.github.io/client-review-report/" }
+    ],
     summary: [
       "这是我的第一个真正意义的互联网作品：从页面结构设计、界面实现，到后端逻辑与公网部署，全部由我一个人完成。",
       "它既有 Python 后端能力的练手，也承载了我对产品体验的理解——我希望它不只是一个“能跑的程序”，而是一个“愿意被人反复使用”的产品。"
@@ -189,6 +193,7 @@ const SITE = {
     /* 相关链接 */
     links: [
       { title: "在线访问", desc: "点击进入我的网站", url: "https://lyh18328594590.pythonanywhere.com/", primary: true },
+      { title: "客户评测报告", desc: "查看完整的客户评测分析报告", url: "https://lyh-215.github.io/client-review-report/" },
       { title: "GitHub 仓库", desc: "查看源码与提交记录", url: "" },
       { title: "更新日志", desc: "记录每次迭代内容", url: "" }
     ]
