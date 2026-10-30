@@ -157,6 +157,14 @@
         <p class="qa-a" data-key="${path}.a"></p>
       </div>`,
 
+    secondaryUrl: (it, path) => `
+      <div class="url-bar secondary">
+        <span class="ub-label" data-key="${path}.name"></span>
+        <code data-key="${path}.url"></code>
+        <a class="btn btn-light btn-sm" data-key-href="${path}.url" href="#" target="_blank" rel="noopener">打开 ↗</a>
+      </div>
+      <p class="ub-desc" data-key="${path}.desc"></p>`,
+
     link: (it, path) => `
       <a class="card link-card ${it.primary ? "primary" : ""}" data-key-href="${path}.url" href="#" target="_blank" rel="noopener">
         <div class="link-text">
