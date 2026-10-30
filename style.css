@@ -288,6 +288,11 @@ h1, h2, h3, h4 {
 @keyframes spin { to { transform: rotate(360deg); } }
 .frame-mask p { font-size: 13.5px; color: var(--text-dim); letter-spacing: 0.06em; }
 .preview-box.blocked .frame-wrap { display: none; }
+.url-bar.secondary { margin-top: 12px; padding: 10px 14px; }
+.url-bar.secondary .ub-label { font-size: 12.5px; letter-spacing: 0.1em; color: #fff; flex: none; opacity: 0.85; }
+.url-bar.secondary code { font-size: 13px; }
+.btn-sm { padding: 6px 12px; font-size: 13px; }
+.ub-desc { margin: 8px 2px 0; font-size: 13px; line-height: 1.5; color: rgba(255, 255, 255, 0.82); }
 .preview-fallback { display: none; padding: 46px 24px; text-align: center; }
 .preview-box.blocked .preview-fallback { display: block; }
 .preview-fallback .icon { color: var(--brand); }
