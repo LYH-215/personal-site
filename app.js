@@ -196,7 +196,17 @@
         <p class="muted" data-key="${path}.desc"></p>
         <div class="chip-wrap">${(it.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         ${it.url ? `<a class="team-link" data-key-href="${path}.url" href="#" target="_blank" rel="noopener">查看详情 ${icon("arrow-right")}</a>` : ""}
-      </article>`
+      </article>`,
+
+    progressItem: (it, path) => `
+      <div class="progress-item">
+        <span class="progress-dot"></span>
+        <span class="progress-date" data-key="${path}.date"></span>
+        <div class="progress-content">
+          <h4 data-key="${path}.title"></h4>
+          <p data-key="${path}.desc"></p>
+        </div>
+      </div>`
   };
 
   /* ------------------------- 渲染核心 ------------------------- */
