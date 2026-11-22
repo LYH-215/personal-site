@@ -290,7 +290,8 @@
     const frame = document.getElementById("siteFrame");
     const box = document.getElementById("previewBox");
     if (!frame || !box) return;
-    const site = get("myWebsite") || {};
+    const key = box.getAttribute("data-preview-key") || "myWebsite";
+    const site = get(key) || {};
     if (!site.showPreview || !site.url) {
       box.classList.add("is-empty");
       return;
