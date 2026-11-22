@@ -199,6 +199,38 @@ const SITE = {
     ]
   },
 
+  /* =========================================================
+   *  团队项目（team.html 页面的全部内容）
+   * ========================================================= */
+  teamProject: {
+    badge: "团队项目 · 已上线",
+    name: "脑洞测试问答",
+    slogan: "和团队成员一起，把一个想法做成能直接玩的网页",
+    url: "https://lyh-215.github.io/naodong-test-quiz/",
+    urlText: "lyh-215.github.io/naodong-test-quiz/",
+    showPreview: true,
+    summary: [
+      "这是我和团队成员共同完成的团队项目——一个可以直接在浏览器中打开的趣味测试问答网站。",
+      "从最初的想法讨论、题目与页面设计，到分工开发和最终部署上线，我们一步步把脑子里的点子变成了现在这个可以分享给别人的网页作品。"
+    ],
+    features: [
+      { icon: "users", title: "团队协作", desc: "成员之间分工配合，从选题、设计到开发共同推进，让项目真正落地。" },
+      { icon: "puzzle", title: "趣味问答", desc: "以测试问答为核心形式，用轻松的方式带给访问者参与感和互动体验。" },
+      { icon: "globe", title: "在线访问", desc: "部署在 GitHub Pages，打开网址即可体验，无需安装任何软件。" },
+      { icon: "rocket", title: "想法变作品", desc: "完整经历需求讨论、页面实现与发布流程，把所学用到真实项目中。" }
+    ],
+    techStack: ["HTML5", "CSS3", "JavaScript", "GitHub Pages"],
+    milestones: [
+      { date: "第一步", title: "想法与分工", desc: "确定项目方向，讨论网站要做什么，并按成员特长分配任务。" },
+      { date: "第二步", title: "内容与设计", desc: "整理题目与文案，设计页面结构和整体视觉风格。" },
+      { date: "第三步", title: "开发与联调", desc: "完成页面实现与交互逻辑，把各部分内容整合成完整网站。" },
+      { date: "第四步", title: "部署上线", desc: "通过 GitHub Pages 发布，团队项目正式对外可访问。" }
+    ],
+    links: [
+      { title: "在线体验团队项目", desc: "点击进入脑洞测试问答网站", url: "https://lyh-215.github.io/naodong-test-quiz/", primary: true }
+    ]
+  },
+
   /* ---------------- 其它作品 / 实践（首页展示） ---------------- */
   projects: [
     {
