@@ -194,7 +194,7 @@
           <span>${icon("users")}<em data-key="${path}.team"></em></span>
         </div>
         <p class="muted" data-key="${path}.desc"></p>
-        <div class="chip-wrap" data-list="${path}.tags" data-item="chip"></div>
+        <div class="chip-wrap">${(it.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
         ${it.url ? `<a class="team-link" data-key-href="${path}.url" href="#" target="_blank" rel="noopener">查看详情 ${icon("arrow-right")}</a>` : ""}
       </article>`
   };
