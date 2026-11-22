@@ -344,6 +344,32 @@ h1, h2, h3, h4 {
 .team-link { display: inline-flex; align-items: center; gap: 6px; margin-top: auto; padding-top: 6px; font-size: 13.5px; color: var(--brand); letter-spacing: 0.04em; }
 .team-link .icon { width: 16px; height: 16px; }
 
+/* ---------------- 项目进度总结（可展开小板块） ---------------- */
+.progress-fold { margin-top: 20px; border: 1px solid var(--border); background: var(--surface); }
+.progress-fold[open] { border-color: var(--brand); }
+.progress-summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 16px; padding: 18px 22px; user-select: none; }
+.progress-summary::-webkit-details-marker { display: none; }
+.progress-summary:hover { background: var(--surface-2); }
+.progress-summary-icon { width: 42px; height: 42px; flex: none; display: grid; place-items: center; border: 1px solid var(--border); color: var(--brand); background: var(--surface-2); }
+.progress-summary-icon .icon { width: 21px; height: 21px; }
+.progress-summary-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+.progress-summary-text b { font-size: 16px; font-family: var(--font-sans); font-weight: 600; }
+.progress-summary-text small { font-size: 13px; color: var(--text-dim); }
+.progress-summary-hint { font-size: 12.5px; color: var(--brand); letter-spacing: 0.04em; white-space: nowrap; }
+.progress-chevron { color: var(--text-dim); display: grid; place-items: center; transition: transform 0.25s ease; }
+.progress-chevron .icon { width: 18px; height: 18px; }
+.progress-fold[open] .progress-chevron { transform: rotate(180deg); }
+.progress-fold[open] .progress-summary-hint { display: none; }
+.progress-body { padding: 6px 24px 26px; border-top: 1px solid var(--border); }
+.progress-timeline { position: relative; padding: 22px 0 0 26px; }
+.progress-timeline::before { content: ""; position: absolute; left: 5px; top: 28px; bottom: 8px; width: 1px; background: var(--border); }
+.progress-item { position: relative; padding-bottom: 24px; }
+.progress-item:last-child { padding-bottom: 0; }
+.progress-dot { position: absolute; left: -25px; top: 6px; width: 11px; height: 11px; border-radius: 50%; background: var(--brand); box-shadow: 0 0 0 4px var(--surface); }
+.progress-date { display: inline-block; font-size: 12.5px; letter-spacing: 0.04em; color: var(--brand); padding: 3px 10px; border: 1px solid var(--line); border-radius: 2px; background: var(--surface-2); margin-bottom: 8px; }
+.progress-content h4 { font-size: 15.5px; margin-bottom: 6px; }
+.progress-content p { font-size: 14.5px; color: var(--text-soft); line-height: 1.75; }
+
 /* ---------------- 联系 ---------------- */
 .contact-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
 .contact-card { display: flex; align-items: center; gap: 14px; padding: 18px 20px; }
