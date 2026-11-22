@@ -179,24 +179,7 @@
         <h4 data-key="${path}.name"></h4>
         <p class="muted" data-key="${path}.desc"></p>
         <span class="project-link">查看详情 ${icon("arrow-right")}</span>
-      </a>`,
-
-    teamProject: (it, path) => `
-      <article class="card team-card">
-        <div class="team-card-head">
-          <span class="feature-icon">${icon("users")}</span>
-          <span class="tag tag-accent" data-key="${path}.achievement"></span>
-        </div>
-        <h4 data-key="${path}.name"></h4>
-        <div class="team-meta">
-          <span>${icon("user")}<em data-key="${path}.role"></em></span>
-          <span>${icon("calendar")}<em data-key="${path}.period"></em></span>
-          <span>${icon("users")}<em data-key="${path}.team"></em></span>
-        </div>
-        <p class="muted" data-key="${path}.desc"></p>
-        <div class="chip-wrap">${(it.tags || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("")}</div>
-        ${it.url ? `<a class="team-link" data-key-href="${path}.url" href="#" target="_blank" rel="noopener">查看详情 ${icon("arrow-right")}</a>` : ""}
-      </article>`
+      </a>`
   };
 
   /* ------------------------- 渲染核心 ------------------------- */
